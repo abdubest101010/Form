@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+  color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(0, 0, 0, 0.7);
+}
+.icons {
+  margin-left: 20px;
+}
+.icons i {
+  color: rgb(0, 0, 0, 0.9);
+  position: relative;
+  top: 0;
+  max-width: 75%;
+  background-color: white;
+  border: 10px solid white;
+  border-radius: 50%;
+}
+
+.container {
+  background-color: rgb(0, 0, 0, 1);
+  position: relative;
+
+  max-width: 500px;
+  height: 500px;
+  margin: 20px auto;
+
+  border: 3px solid black;
+}
+header {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+span {
+  margin: 0;
+  border: 20px;
+  border-radius: 50%;
+}
+
+.fa-user::after {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 30px;
+  top: 6px;
+}
+.icons::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 22px;
+
+  top: 102px;
+}
+.fa-envelope::after {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 32px;
+  top: 6px;
+}
+.fa-key::after {
+  content: "";
+  display: block;
+  width: 73px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 32px;
+  top: 6px;
+}
+.fa-trophy::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 32px;
+  top: 6px;
+}
+
+.fa-user {
+  position: absolute;
+  left: 20px;
+}
+.fa-envelope {
+  position: relative;
+  left: 100px;
+}
+.fa-key {
+  left: 180px;
+}
+
+.fa-trophy {
+  left: 260px;
+}
+
+.instruction h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  color: white;
+}
+.instruction h4 {
+  text-align: center;
+
+  font-size: 11px;
+}
+#submit {
+  float: right;
+  width: 100px;
+  height: 40px;
+  background-color: green;
+  border: 10px solid green;
+  border-radius: 35%;
+  position: relative;
+  top: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+input {
+  background-color: gray;
+  font-size: inherit;
+  color: white;
+  border: solid gray;
+  position: relative;
+  border-radius: 10px;
+  height: 50px;
+}
+input ::placeholder {
+  color: red;
+}
+
+#users {
+  /* display: none; */
+  width: 450px;
+}
+#first {
+  /* display: none; */
+  width: 225px;
+}
+#last {
+  /* display: none; */
+  width: 220px;
+}
