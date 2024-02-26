@@ -31,10 +31,11 @@
           <li>No spaces or special characters allowed</li>
           <li>Your username should not be offensive or contain profanity</li>  
           </ul>
-          <input id="users" type="text" placeholder="Username"> <br> 
+          <p class="error"></p>
+          <input id="users"  title="Username must be 3-16 characters long and can only contain letters, numbers, _, or -"   placeholder="Username" required> <br> 
           
-          <input id="first" type="text" placeholder="First name">
-          <input id="last" type="text" name="" id="" placeholder="Last name"> <br>
+          <input id="first" type="text"  placeholder="First name" required>
+          <input id="last" type="text"  name="" id="" placeholder="Last name" required> <br>
           <button id="submit" type="text">Next</button>
         </form>
             
