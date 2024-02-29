@@ -17,27 +17,44 @@
         
         <div class="icons">
           <span>
-            <i class="fa fa-user" aria-hidden="true"></i>
+            <i  id="userFirst" class="fa fa-user" aria-hidden="true"></i>
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <i class="fa-solid fa-key"></i>
             <i class="fa fa-trophy" aria-hidden="true"></i>
           </span>
         </div>
-          <div class="instruction">
+           <div id="instruction">
             <h2>User Name</h2>
             <h4>Username is your online identity</h4>
             <ul>
-          <li>Your username should only contain letters, numbers, underscores or hyphens</li>
+          <li class="letters">Your username should only contain letters, numbers, underscores or hyphens</li>
           <li>No spaces or special characters allowed</li>
           <li>Your username should not be offensive or contain profanity</li>  
           </ul>
           <p class="error"></p>
-          <input id="users"  title="Username must be 3-16 characters long and can only contain letters, numbers, _, or -"   placeholder="Username" required> <br> 
+          <input id="users"placeholder="Username" required> <br> 
           
           <input id="first" type="text"  placeholder="First name" required>
           <input id="last" type="text"  name="" id="" placeholder="Last name" required> <br>
           <button id="submit" type="text">Next</button>
+           </div> 
+            
         </form>
+
+        <div id="emailForm">
+          <p id="emaiFor12">Email</p>
+          <p id="emailInstr">Email is the gateway to your digital life</p>
+          <ul>
+            <li>Please enter valid email in the format "example@example.com</li>
+            <li>We value your privacy and will never use your email for any unauthorized purposes</li>
+            <li>Please don't use email that belongs to someone else </li>
+            <li>Please don't use email that includes personal information</li>
+          </ul>
+          <input type="email" class="email" placeholder="Email"><br>
+          <button id="next2" type="submit">Next</button>
+        </div> 
+          
+        
             
           
           
@@ -45,7 +62,7 @@
         </div>
         
     
-    
+       
       
     
     

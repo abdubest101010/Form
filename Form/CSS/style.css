@@ -4,171 +4,341 @@
 }
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   min-height: 100vh;
   font-size: 16px;
   color: rgb(255, 255, 255, 0.7);
   background-color: #343a40;
+  text-align: center;
 }
-.icons {
-  margin-left: 20px;
-}
-.icons i {
-  color: rgb(0, 0, 0, 0.9);
-  position: relative;
-  top: 0;
-  max-width: 75%;
-  background-color: white;
-  border: 10px solid white;
-  border-radius: 50%;
-}
-
 .container {
   background-color: rgb(0, 0, 0, 1);
   position: relative;
-
-  max-width: 500px;
-  height: 500px;
-  margin: 20px auto;
-
-  border: 3px solid black;
+  width: 300px;
+  height: 600px;
+  margin-top: 60px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.fa-arrow-left {
+  position: relative;
+  margin-top: 7px;
+  float: left;
+  font-weight: bolder;
+  color: white;
+  font-size: 20px;
 }
 header {
-  font-weight: bold;
-  text-align: center;
+  position: relative;
+  margin-top: 15px;
+  font-weight: bolder;
   color: white;
-  font-size: 25px;
-}
-span {
-  margin: 0;
-  border: 20px;
-  border-radius: 50%;
+  font-size: 35px;
 }
 
-.fa-user::after {
+span i {
+  color: rgb(0, 0, 0, 0.9);
+  position: relative;
+  float: left;
+  margin-left: 15px;
+  font-size: 18px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.fa-user {
+  position: relative;
+}
+
+.fa-envelope {
+  position: relative;
+  left: 25px;
+}
+.fa-key {
+  position: relative;
+  left: 50px;
+}
+
+.fa-trophy {
+  position: relative;
+  left: 75px;
+}
+/* .fa-user::after {
   content: "";
   display: block;
-  width: 73px;
+  width: 20px;
   height: 5px;
   background: white;
-  position: absolute;
-  left: 30px;
-  top: 6px;
+  position: relative;
+  left: 35px;
+  
 }
 .icons::before {
   content: "";
   display: block;
-  width: 24px;
+  width: 10px;
   height: 5px;
   background: white;
-  position: absolute;
-  left: 22px;
+  position: relative;
 
-  top: 102px;
+  top: 16px;
 }
 .fa-envelope::after {
   content: "";
   display: block;
-  width: 73px;
+  width: 30px;
   height: 5px;
   background: white;
-  position: absolute;
+  position: relative;
   left: 32px;
   top: 6px;
 }
 .fa-key::after {
   content: "";
   display: block;
-  width: 73px;
+  width: 36px;
   height: 5px;
   background: white;
-  position: absolute;
+  position: relative;
   left: 32px;
   top: 6px;
 }
 .fa-trophy::after {
   content: "";
   display: block;
-  width: 24px;
+  width: 17px;
   height: 5px;
   background: white;
-  position: absolute;
+  position: relative;
   left: 32px;
   top: 6px;
-}
+}  */
 
-.fa-user {
-  position: absolute;
-  left: 20px;
-}
-.fa-envelope {
+h2 {
   position: relative;
-  left: 100px;
-}
-.fa-key {
-  left: 180px;
-}
-
-.fa-trophy {
-  left: 260px;
-}
-
-.instruction h2 {
+  margin-top: 40px;
   text-align: center;
-  margin-top: 20px;
-  font-size: 15px;
   color: white;
+  font-weight: bolder;
 }
-.instruction h4 {
-  text-align: center;
-
-  font-size: 11px;
-}
-#submit {
-  float: right;
-  width: 100px;
-  height: 40px;
-  background-color: green;
-  border: 10px solid green;
-  border-radius: 35%;
+h4 {
   position: relative;
-  top: 10px;
+  margin-top: 20px;
   text-align: center;
-  text-transform: capitalize;
-  padding-bottom: 30px;
+  font-size: 12px;
+}
+ul li {
+  text-align: left;
 }
 input {
-  background-color: #6c757d;
-  font-size: inherit;
-  padding-left: 6px;
-  border: solid gray;
-  position: relative;
-  border-radius: 10px;
+  float: left;
+  width: 100%;
   height: 50px;
+  background-color: #6c757d;
+  border: 4px solid #6c757d;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 input::placeholder {
   color: white;
+  padding-left: 10px;
 }
 input:focus {
-  border: solid green;
+  border: 5px double green;
 }
-#users {
-  margin-bottom: 8px;
+#submit {
+  float: right;
+  background: green;
+  width: 50px;
+  border-radius: 10px;
+  padding: auto;
 }
-#first {
-  margin-right: 6px;
+#emailForm {
+  left: 100%;
+  opacity: 1;
+  transition: left 5ms ease-out;
 }
 
-#users {
-  /* display: none; */
-  width: 450px;
+#emailForm {
+  display: none;
+  position: relative;
+  font-size: 20px;
+  color: white;
 }
-#first {
-  /* display: none; */
-  width: 225px;
+#emailForm ul li {
+  font-size: 17px;
+  color: #6c757d;
 }
-#last {
-  /* display: none; */
-  width: 220px;
+@keyframes slideOutAnimation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+#emailForm {
+  animation: slideOutAnimation 0.5s reverse;
+}
+#emaiFor12 {
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+#emailInstr {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+#emailForm ul li {
+  text-align: left;
+}
+#emailForm input {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background-color: #6c757d;
+  border: 4px solid #6c757d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#emailForm input::placeholder {
+  color: white;
+  padding-left: 10px;
+}
+#emailForm input:focus {
+  border: 5px double green;
+}
+#next2 {
+  float: right;
+  background: green;
+  width: 50px;
+  border-radius: 10px;
+  padding: auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    position: relative;
+    width: 600px;
+    margin-top: 70px;
+  }
+  header {
+    font-size: 30px;
+  }
+  .icons i {
+    font-size: 30px;
+  }
+
+  .icons {
+    position: relative;
+    margin-top: 10px;
+    font-size: 30px;
+  }
+
+  .fa-user {
+    position: relative;
+    left: 30px;
+  }
+  .fa-envelope {
+    position: relative;
+    left: 120px;
+  }
+  .fa-key {
+    position: relative;
+    left: 220px;
+  }
+
+  .fa-trophy {
+    left: 320px;
+  }
+
+  .fa-user::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 42px;
+    top: 12px;
+  }
+  .icons::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: white;
+    position: absolute;
+
+    top: 17px;
+  }
+  .fa-envelope::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 46px;
+    top: 12px;
+  }
+  .fa-key::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 47px;
+    top: 12px;
+  }
+  .fa-trophy::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    left: 52px;
+    top: 12px;
+  }
+
+  #instruction ul li {
+    font-size: 18px;
+  }
+  h2 {
+    position: relative;
+    margin-top: 70px;
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  ul li {
+    font-size: 30px;
+  }
+  #first {
+    width: 50%;
+    margin-right: 5px;
+  }
+  #last {
+    width: 48%;
+  }
+  #submit {
+    position: relative;
+    margin-top: 30px;
+  }
+}
+#emaiFor12 {
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
 }
