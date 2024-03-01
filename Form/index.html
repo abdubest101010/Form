@@ -10,17 +10,23 @@
   </head>
   <body>
     <div class="container">
-      <i class="fa-solid fa-arrow-left"></i>
+      <i id="arrow" class="fa-solid fa-arrow-left"></i>
       <form action="">
         <header>Sign Up</header>
         <br>
         
-        <div class="icons">
+        <div id="userFirst" class="icons">
           <span>
-            <i  id="userFirst" class="fa fa-user" aria-hidden="true"></i>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <i class="fa-solid fa-key"></i>
+            <p id="lineBefore"></p>
+            <i   id="userBg" class="fa fa-user" aria-hidden="true"></i>
+            <p id="lineAfter"></p>
+            
+          <i id="fa-enveloped" class="fa fa-envelope" aria-hidden="true"></i>
+          <p id="lineAfter2"></p>
+          <i class="fa-solid fa-key"></i>
+          <p id="lineAfter3"></p>
             <i class="fa fa-trophy" aria-hidden="true"></i>
+            <p id="lineAfter4"></p>
           </span>
         </div>
            <div id="instruction">
@@ -32,7 +38,7 @@
           <li>Your username should not be offensive or contain profanity</li>  
           </ul>
           <p class="error"></p>
-          <input id="users"placeholder="Username" required> <br> 
+          <input id="users" placeholder="Username" required> <br> 
           
           <input id="first" type="text"  placeholder="First name" required>
           <input id="last" type="text"  name="" id="" placeholder="Last name" required> <br>
@@ -54,7 +60,18 @@
           <button id="next2" type="submit">Next</button>
         </div> 
           
-        
+        <div id="password">
+          <h2>Password</h2>
+          <h4>Password is your privacy</h4>
+          <ul>
+            <li>Use a combination of at least eight letters, numbers, and symbols.</li>
+            <li>The longer your password and the more character variety it uses, the harder it is to guess.</li>
+          </ul>
+          <input type="text" id="passCode" placeholder="Password">
+          <input type="text" id="passCode2" placeholder="Repeat Password">
+          <button id="next3" type="submit">Next</button>
+        </div>
+        <div id="congra">congratulation you all are set</div>
             
           
           
