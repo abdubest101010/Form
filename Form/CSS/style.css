@@ -14,8 +14,8 @@ body {
 .container {
   background-color: rgb(0, 0, 0, 1);
   position: relative;
-  width: 300px;
-  height: 600px;
+  width: 360px;
+  height: 570px;
   margin-top: 50px;
   align-items: center;
   text-align: center;
@@ -28,102 +28,121 @@ body {
   margin-top: 7px;
   float: left;
   font-weight: bolder;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+#arrow1 {
+  display: none;
+  position: relative;
+  margin-top: 7px;
+  float: left;
+  font-weight: bolder;
   color: white;
   font-size: 20px;
 }
+
 header {
   position: relative;
   margin-top: 15px;
   font-weight: bolder;
   color: white;
-  font-size: 35px;
+  font-size: 25px;
 }
 
-span > i {
+#userFirst i {
   color: rgb(0, 0, 0, 0.9);
-  position: relative;
-  float: left;
-  margin-left: 13px;
+  position: absolute;
+  margin-left: 20px;
   font-size: 20px;
-  max-width: 100%;
-  max-height: 100%;
   background-color: white;
-  border: 5px solid white;
+  border: 8px solid white;
   border-radius: 50%;
+  margin-bottom: 0px;
 }
 .fa-user {
-  position: relative;
-  left: 6px;
+  position: absolute;
+  left: 15px;
+  top: 68px;
 }
 
 .fa-envelope {
-  position: relative;
-  left: 36px;
+  position: absolute;
+  left: 100px;
+  top: 68px;
 }
 .fa-key {
-  position: relative;
-  left: 66px;
+  position: absolute;
+  left: 185px;
+  top: 68px;
 }
 
 .fa-trophy {
-  position: relative;
-  left: 96px;
-}
-#lineAfter {
-  content: "";
-  display: block;
-  width: 27px;
-  height: 5px;
-  background: white;
   position: absolute;
-  left: 65px;
-  top: 107px;
+  left: 270px;
+  top: 68px;
 }
 #lineBefore {
   content: "";
   display: block;
-  width: 14px;
+  width: 16px;
   height: 5px;
   background: white;
-  position: absolute;
-  top: 107px;
+  position: relative;
+  top: 7px;
 }
+#lineAfter {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 5px;
+  background: white;
+  position: relative;
+  left: 63px;
+  bottom: 15px;
+}
+
 #lineAfter2 {
   content: "";
   display: block;
-  width: 30px;
+  width: 38px;
   height: 5px;
   background: white;
-  position: absolute;
-  left: 135px;
-  top: 107px;
+  position: relative;
+  left: 150px;
+  bottom: 35px;
 }
 #lineAfter3 {
   content: "";
   display: block;
-  width: 30px;
+  width: 33px;
   height: 5px;
   background: white;
-  position: absolute;
-  left: 210px;
-  top: 107px;
+  position: relative;
+  left: 238px;
+  bottom: 55px;
 }
 #lineAfter4 {
   content: "";
   display: block;
-  width: 10px;
+  width: 20px;
   height: 5px;
   background: white;
-  position: absolute;
-  left: 285px;
-  top: 107px;
-}
- h2 {
   position: relative;
-  margin-top: 40px;
+  left: 325px;
+  bottom: 76px;
+}
+#instruction {
+  position: relative;
+  bottom: 60px;
+}
+#instruction h2 {
+  position: relative;
+
+  font-size: 30px;
   text-align: center;
   color: white;
-  font-weight: bolder;
 }
 h4 {
   position: relative;
@@ -143,32 +162,40 @@ input {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+input[type="text"]:valid {
+  background: #6c757d;
+  padding-left: 10px;
+}
+
 input::placeholder {
+  background-color: #6c757d;
   color: white;
   padding-left: 10px;
 }
 input:focus {
-  border: 5px double green ;
+  border: 5px double green;
   outline: none;
-
 }
 #submit {
   float: right;
+  position: relative;
   background: green;
-  width: 50px;
+  width: 80px;
   border-radius: 10px;
   padding: auto;
+  height: 40px;
 }
 #emailForm {
   left: 100%;
+
   opacity: 1;
   display: none;
   position: relative;
+  bottom: 80px;
   font-size: 20px;
   color: white;
   transition: left 5ms ease-out;
 }
-
 
 #emailForm ul li {
   font-size: 17px;
@@ -221,8 +248,10 @@ input:focus {
 }
 #next2 {
   float: right;
+  position: relative;
   background: green;
-  width: 50px;
+  width: 80px;
+  height: 40px;
   border-radius: 10px;
   padding: auto;
 }
@@ -233,13 +262,11 @@ input:focus {
   opacity: 1;
   display: none;
   position: relative;
-  
+  bottom: 80px;
   font-size: 20px;
   color: white;
   transition: left 5ms ease-out;
-  
 }
-
 
 #password ul li {
   font-size: 17px;
@@ -258,18 +285,17 @@ input:focus {
 #password {
   animation: slideOutAnimation 0.1s reverse;
 }
-#password{
+#password {
   text-align: center;
   left: 0;
 }
 
-#password > h2{
+#password > h2 {
   position: relative;
   margin-top: 60px;
   text-align: center;
   color: white;
   font-weight: bolder;
-
 }
 #password > h4 {
   position: relative;
@@ -278,10 +304,10 @@ input:focus {
   font-size: 12px;
   color: #6c757d;
 }
-#password ul li{
+#password ul li {
   text-align: left;
 }
-#password input{
+#password input {
   float: left;
   width: 100%;
   height: 50px;
@@ -300,20 +326,51 @@ input:focus {
 }
 #next3 {
   float: right;
+  position: relative;
   background: green;
-  width: 50px;
+  width: 80px;
+  height: 40px;
   border-radius: 10px;
   padding: auto;
 }
-#congra{
+#congra {
   display: none;
+  left: 100%;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 60px;
+  bottom: 100px;
 }
-
+@keyframes slideOutAnimation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+#congra {
+  animation: slideOutAnimation 0.1s reverse;
+}
+#congra button {
+  float: right;
+  position: relative;
+  background: green;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  padding: auto;
+}
 @media screen and (min-width: 768px) {
   .container {
     position: relative;
     width: 600px;
     margin-top: 70px;
+    height: 650px;
   }
   header {
     font-size: 30px;
@@ -330,26 +387,31 @@ input:focus {
   }
 
   .fa-user {
-    position: relative;
-    left: 30px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
   }
   .fa-envelope {
-    position: relative;
-    left: 120px;
+    position: absolute;
+    left: 160px;
+    top: 0px;
   }
   .fa-key {
-    position: relative;
-    left: 220px;
+    position: absolute;
+    left: 300px;
+    top: 0px;
   }
 
   .fa-trophy {
-    left: 320px;
+    position: absolute;
+    left: 440px;
+    top: 0;
   }
 
   #lineAfter {
     content: "";
     display: block;
-    width: 80px;
+    width: 85px;
     height: 5px;
     background: white;
     position: absolute;
@@ -359,7 +421,7 @@ input:focus {
   #lineBefore {
     content: "";
     display: block;
-    width: 28px;
+    width: 33px;
     height: 5px;
     background: white;
     position: absolute;
@@ -369,7 +431,7 @@ input:focus {
   #lineAfter2 {
     content: "";
     display: block;
-    width: 90px;
+    width: 85px;
     height: 5px;
     background: white;
     position: absolute;
@@ -379,38 +441,40 @@ input:focus {
   #lineAfter3 {
     content: "";
     display: block;
-    width: 87px;
+    width: 85px;
     height: 5px;
     background: white;
     position: absolute;
-    left: 370px;
+    left: 365px;
     top: 14px;
   }
   #lineAfter4 {
     content: "";
     display: block;
-    width: 35px;
+    width: 45px;
     height: 5px;
     background: white;
     position: absolute;
-    left: 520px;
+    left: 510px;
     top: 14px;
+  }
+  #instruction {
+    position: relative;
+    top: 0px;
   }
 
   #instruction ul li {
-    font-size: 18px;
+    font-size: 21px;
   }
   h2 {
     position: relative;
     margin-top: 70px;
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 15px;
-  }
-  ul li {
     font-size: 30px;
   }
+  h4 {
+    font-size: 20px;
+  }
+
   #first {
     width: 50%;
     margin-right: 5px;
@@ -420,11 +484,23 @@ input:focus {
   }
   #submit {
     position: relative;
-    margin-top: 30px;
+    width: 70px;
   }
-}
-#emaiFor12 {
-  text-align: center;
-  position: relative;
-  margin-top: 50px;
+  #emailForm {
+    position: relative;
+    top: 10px;
+  }
+  #emaiFor12 {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+  }
+  #password {
+    position: relative;
+    top: 10px;
+  }
+  #congra {
+    position: relative;
+    top: 10px;
+  }
 }

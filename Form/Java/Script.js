@@ -12,7 +12,8 @@ const myElement = document.getElementById("lineAfter");
 var passCode = document.getElementById("passCode4");
 var passCode2 = document.getElementById("passCode2");
 var passswordWrite = document.getElementById("password");
-var passValid = /^(.{0,7}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/;
+var passValid =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 var firstName = /^[a-zA-Z]{4,20}$/;
 var userNameRex = /^[a-zA-Z0-9_-]{5,16}$/;
 var userBg = document.getElementById("userBg");
@@ -20,7 +21,12 @@ var emailCode = document.getElementById("email2");
 var envelope = document.getElementById("fa-enveloped");
 var emailtransform = document.getElementById("emailForm");
 var emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-var envelope2 = document.getElementById("fa-enveloped");
+
+var usernameValue = "";
+var firstnameValue = "";
+var lastnamevalue = "";
+var emailValue = "";
+
 $("#submit").on("click", function userName(e) {
   e.preventDefault();
 
@@ -54,14 +60,17 @@ $("#submit").on("click", function userName(e) {
     myElement.style.background =
       "linear-gradient(to right, green 50%, white 50%)";
 
-    document.getElementById("lineBefore").style.backgroundColor = "green";
+    document.getElementById("lineBefore").style.background = "green";
 
-    userBg.style.backgroundColor = "green";
+    userBg.style.background = "green";
     userBg.style.border = "green";
+
+    document.getElementById("arrow").style.display = "block";
   }
 });
 $("#next2").on("click", function passswordGenerate(e) {
   e.preventDefault();
+
   if (emailCode.value == "") {
     errorMessage2.style.color = "red";
     errorMessage2.innerHTML = "please enter email";
@@ -72,14 +81,15 @@ $("#next2").on("click", function passswordGenerate(e) {
     passswordWrite.style.left = "0";
 
     myElement.style.background = "green";
+
     document.getElementById("lineAfter2").style.background =
       "linear-gradient(to right, green 50%, white 50%)";
-    envelope2.style.backgroundColor = "green";
-    envelope2.style.border = "green";
-    emailForm1.style.display = "none";
     envelope.style.backgroundColor = "green";
     envelope.style.border = "green";
+    emailForm1.style.display = "none";
     document.getElementById("password").style.display = "block";
+    document.getElementById("arrow1").style.display = "block";
+    document.getElementById("arrow").style.display = "none";
   }
 });
 $("#next3").on("click", function passed(e) {
@@ -88,13 +98,13 @@ $("#next3").on("click", function passed(e) {
   if (passCode.value == "") {
     errorMessage3.innerHTML = "please enter password";
     errorMessage3.style.color = "red";
-  } else if (!passValid.test(passCode)) {
+  } else if (!passValid.test(passCode.value)) {
     errorMessage3.innerHTML = "please enter valid password";
     errorMessage3.style.color = "red";
   } else if (passCode2.value == "") {
     errorMessage3.innerHTML = "please enter password";
     errorMessage3.style.color = "red";
-  } else if (!passValid.test(passCode2)) {
+  } else if (!passValid.test(passCode2.value)) {
     errorMessage3.innerHTML = "please enter valid password";
     errorMessage3.style.color = "red";
   } else if (passCode.value !== passCode2.value) {
@@ -102,5 +112,63 @@ $("#next3").on("click", function passed(e) {
     console.log(passCode2.value);
     errorMessage3.innerHTML = "Incorrect Match";
     errorMessage3.style.color = "red";
+  } else if (passCode.value == passCode2.value) {
+    passswordWrite.style.display = "none";
+    document.getElementById("congra").style.display = "block";
   }
+  usernameValue += username1.value;
+  firstnameValue += firstName2.value;
+  lastnamevalue += lastName.value;
+  emailValue += emailCode.value;
+  document.getElementById("congra").style.left = "0";
+  document.getElementById("fa-keyed").style.border = "green";
+  document.getElementById("fa-trophyed").style.border = "green";
+  document.getElementById("fa-keyed").style.backgroundColor = "green";
+  document.getElementById("fa-trophyed").style.backgroundColor = "green";
+  document.getElementById("lineAfter2").style.background = "green";
+  document.getElementById("lineAfter4").style.background = "green";
+  document.getElementById("lineAfter3").style.background = "green";
+  document.getElementById("usernamelast").innerHTML =
+    "Username= " + usernameValue;
+  document.getElementById("firstnamelast").innerHTML =
+    "Fist name= " + firstnameValue;
+  document.getElementById("lastnamelast").innerHTML =
+    "Last name= " + lastnamevalue;
+  document.getElementById("emaillast").innerHTML = "Email= " + emailValue;
+  document.getElementById("arrow1").style.display = "none";
+});
+$("#arrow").on("click", function backButton(e) {
+  e.preventDefault();
+  useNameForm.style.display = "block";
+  emailForm1.style.display = "none";
+});
+$("#arrow1").on("click", function backButton(e) {
+  e.preventDefault();
+  document.getElementById("password").style.display = "none";
+  emailForm1.style.display = "block";
+});
+$("#finish").on("click", function finished(e) {
+  e.preventDefault();
+  document.getElementById("congra").style.display = "none";
+  useNameForm.style.display = "block";
+  document.getElementById("fa-keyed").style.border = "";
+  document.getElementById("fa-trophyed").style.border = "";
+  document.getElementById("fa-keyed").style.backgroundColor = "";
+  document.getElementById("fa-trophyed").style.backgroundColor = "";
+  document.getElementById("lineAfter2").style.background = "white";
+  document.getElementById("lineAfter").style.background = "white";
+  document.getElementById("lineAfter4").style.background = "white";
+  document.getElementById("lineAfter3").style.background = "white";
+  username1.value = "";
+  firstName2.value = "";
+  emailCode.value = "";
+  lastName.value = "";
+  document.getElementById("lineBefore").style.background = "white";
+
+  passCode.value = "";
+  passCode2.value = "";
+  envelope.style.backgroundColor = "";
+  envelope.style.border = "";
+  userBg.style.backgroundColor = "";
+  userBg.style.border = "";
 });

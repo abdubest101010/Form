@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <div class="container">
+    <div id="containers" class="container">
       <i id="arrow" class="fa-solid fa-arrow-left"></i>
+      <i id="arrow1" class="fa-solid fa-arrow-left"></i>
+      
       <form action="">
         <header>Sign Up</header>
         <br>
-        
-        <div id="userFirst" class="icons">
+         <div id="userFirst" class="icons">
           <span>
             <p id="lineBefore"></p>
-            <i   id="userBg" class="fa fa-user" aria-hidden="true"></i>
+            <i id="userBg" class="fa fa-user" aria-hidden="true"></i>
             <p id="lineAfter"></p>
             
           <i id="fa-enveloped" class="fa fa-envelope" aria-hidden="true"></i>
           <p id="lineAfter2"></p>
-          <i class="fa-solid fa-key"></i>
+          <i id="fa-keyed" class="fa fa-solid fa-key"></i>
           <p id="lineAfter3"></p>
-            <i class="fa fa-trophy" aria-hidden="true"></i>
+            <i id="fa-trophyed" class="fa fa-trophy" aria-hidden="true"></i>
             <p id="lineAfter4"></p>
           </span>
         </div>
            <div id="instruction">
-            <h2>User Name</h2>
+            <h2 id="userw">User Name</h2>
             <h4>Username is your online identity</h4>
             <ul>
           <li class="letters">Your username should only contain letters, numbers, underscores or hyphens</li>
@@ -73,8 +74,18 @@
           <input type="text" id="passCode2" placeholder="Repeat Password">
           <button id="next3" type="submit">Next</button>
         </div>
-        <div id="congra">congratulation you all are set</div>
-            
+        <div id="congra">congratulation you all are set
+        <p id="info">Here is your information</p>
+        <ul>
+          <li id="usernamelast"></li>
+          <li id="firstnamelast"></li>
+          <li id="lastnamelast"></li>
+          <li id="emaillast"></li>
+        </ul>
+        
+      
+        <button id="finish">Finish</button>
+        </div>   
           
           
       </div>
@@ -85,7 +96,7 @@
       
     
     
-
+    
     <script src="Java/jquery-3.7.1.min.js"></script>
     <script src="Java/Script.js"></script>
   </body>
